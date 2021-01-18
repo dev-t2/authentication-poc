@@ -1,21 +1,23 @@
-class Human {
-  constructor(name: string, age: number, gender: string) {
-    this.name = name;
-    this.age = age;
-    this.gender = gender;
-  }
+class Block {
+  public index: number;
+  public hash: string;
+  public previousHash: string;
+  public data: string;
+  public timestamp: number;
 
-  public name: string;
-  public age: number;
-  public gender: string;
+  constructor(index: number, hash: string, previousHash: string, data: string, timestamp: number) {
+    this.index = index;
+    this.hash = hash;
+    this.previousHash = previousHash;
+    this.data = data;
+    this.timestamp = timestamp;
+  }
 }
 
-const person = new Human('T2', 33, 'male');
+const rootBlock: Block = new Block(0, '0401', '', 'TypeScript', 210118);
 
-const sayHello = (person: Human): string => {
-  return `TypeScript => name: ${person.name}, age: ${person.age}, gender: ${person.gender}`;
-};
+const blockChain: [Block] = [rootBlock];
 
-console.log(sayHello(person));
+console.log(blockChain);
 
 export {};
