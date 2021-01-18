@@ -1,7 +1,19 @@
-const person = (name: string, age: number, gender: string): string => {
-  return `TypeScript => name: ${name}, age: ${age}, gender: ${gender}`;
+interface Human {
+  name: string;
+  age: number;
+  gender: string;
+}
+
+const person = {
+  name: 'DeveloperT2',
+  age: 33,
+  gender: 'male',
 };
 
-console.log(person('DeveloperT2', 33, 'male'));
+const sayHello = (person: Human): string => {
+  return `TypeScript => name: ${person.name}, age: ${person.age}, gender: ${person.gender}`;
+};
+
+console.log(sayHello(person));
 
 export {};
