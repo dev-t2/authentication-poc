@@ -50,21 +50,6 @@ const getNewTimeStamp = (): number => {
   return Math.round(new Date().getTime() / 1000);
 };
 
-const createNewBlock = (data: string): Block => {
-  const previousBlock: Block = getLatestBlock();
-  const newIndex: number = previousBlock.index + 1;
-  const newTimestamp: number = getNewTimeStamp();
-  const newHash: string = Block.calculateBlockHash(
-    newIndex,
-    previousBlock.hash,
-    data,
-    newTimestamp
-  );
-  const newBlock: Block = new Block(newIndex, newHash, previousBlock.hash, data, newTimestamp);
-
-  return newBlock;
-};
-
 const getHash4Block = (block: Block): string => {
   return Block.calculateBlockHash(block.index, block.previousHash, block.data, block.timestamp);
 };
@@ -82,5 +67,34 @@ const isBlockValid = (candidateBlock: Block, previousBlock: Block): boolean => {
     return true;
   }
 };
+
+const addBlock = (candidateBlock: Block): void => {
+  if (isBlockValid(candidateBlock, getLatestBlock())) {
+    blockChain.push(candidateBlock);
+  }
+};
+
+const createNewBlock = (data: string): Block => {
+  const previousBlock: Block = getLatestBlock();
+  const newIndex: number = previousBlock.index + 1;
+  const newTimestamp: number = getNewTimeStamp();
+  const newHash: string = Block.calculateBlockHash(
+    newIndex,
+    previousBlock.hash,
+    data,
+    newTimestamp
+  );
+  const newBlock: Block = new Block(newIndex, newHash, previousBlock.hash, data, newTimestamp);
+
+  addBlock(newBlock);
+
+  return newBlock;
+};
+
+createNewBlock('Second Block');
+createNewBlock('Third Block');
+createNewBlock('Fourth Block');
+
+console.log(blockChain);
 
 export {};
