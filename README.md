@@ -1,5 +1,6 @@
 # Learn TypeScript
 
 - NodeJS: https://nodejs.org/ko/
-- TypeScript: https://www.typescriptlang.org/
 - VS Code: https://code.visualstudio.com/
+- TypeScript: https://www.typescriptlang.org/
+- TS Node: https://www.npmjs.com/package/ts-node

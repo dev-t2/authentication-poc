@@ -1,5 +1,3 @@
-// tsc --init
-
 {
   "compilerOptions": {
     "outDir": "./dist",
