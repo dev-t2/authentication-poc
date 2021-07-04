@@ -1,9 +1,6 @@
-type Person = {
-  name: string;
-};
+let person1: any;
 
-let person: any;
+person1 = JSON.parse('{"nane":"TypeScript"}');
 
-person = JSON.parse('{"nane":"TypeScript"}');
-
-console.log(person.name);
+console.log(person1);
+console.log(person1.name);
