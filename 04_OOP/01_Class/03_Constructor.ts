@@ -1,5 +1,5 @@
 class Person3 {
-  public name = '';
+  name = '';
   private age = 0;
 
   constructor(name: string, age: number) {
