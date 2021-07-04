@@ -6,9 +6,9 @@ const promiseFunc1 = () => {
       const isSuccess = true;
 
       if (isSuccess) {
-        resolve('Resolve 1');
+        resolve('Resolve Function 1');
       } else {
-        reject('Reject 1');
+        reject('Reject Function 1');
       }
     }, 1000);
   });
@@ -22,9 +22,9 @@ const promiseFunc2 = data => {
       const isSuccess = true;
 
       if (isSuccess) {
-        resolve(`${data}, Resolve 2`);
+        resolve(`${data}, Resolve Function 2`);
       } else {
-        reject(`${data}, Reject 2`);
+        reject(`${data}, Reject Function 2`);
       }
     }, 1000);
   });
@@ -35,4 +35,4 @@ promiseFunc1()
   .then(data => console.log(data))
   .catch(error => console.log(error));
 
-console.log('Waiting for result');
+console.log('Waiting...');

@@ -6,9 +6,9 @@ const promiseFunc = () => {
       const isSuccess = true;
 
       if (isSuccess) {
-        resolve('Resolve');
+        resolve('Resolve Function');
       } else {
-        reject('Reject');
+        reject('Reject Function');
       }
     }, 1000);
   });
@@ -18,4 +18,4 @@ promiseFunc()
   .then(data => console.log(data))
   .catch(error => console.log(error));
 
-console.log('Waiting for result');
+console.log('Waiting...');

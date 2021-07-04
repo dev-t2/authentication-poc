@@ -1,18 +1,18 @@
 const callbackHell = () => {
   setTimeout(() => {
-    console.log('callbackHell 1');
+    console.log('Callback Hell 1');
 
     setTimeout(() => {
-      console.log('callbackHell 2');
+      console.log('Callback Hell 2');
 
       setTimeout(() => {
-        console.log('callbackHell 3');
+        console.log('Callback Hell 3');
 
         setTimeout(() => {
-          console.log('callbackHell 4');
+          console.log('Callback Hell 4');
 
           setTimeout(() => {
-            console.log('callbackHell 5');
+            console.log('Callback Hell 5');
           }, 1000);
         }, 1000);
       }, 1000);
