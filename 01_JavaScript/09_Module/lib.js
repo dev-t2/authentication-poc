@@ -5,3 +5,9 @@ export const a = () => {
 export const b = () => {
   console.log('Function B');
 };
+
+const c = () => {
+  console.log('Function C');
+};
+
+export default c;
