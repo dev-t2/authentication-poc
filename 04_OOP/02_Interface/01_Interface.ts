@@ -1,4 +1,4 @@
-interface MotorVehicle {
+export interface MotorVehicle {
   startEngine(): boolean;
   stopEngine(): boolean;
   brake(): boolean;
