@@ -1,7 +1,0 @@
-{
-  "compilerOptions": {
-    "outDir": "./dist",
-    "noEmitOnError": true,
-    "target": "ES6"
-  }
-}
